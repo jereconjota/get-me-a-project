@@ -84,7 +84,7 @@ function HomePage() {
           />
           <ul className="text-md flex gap-5 mt-5">            {
             keywords.map((kw) => (
-              <li className="bg-indigo-500 px-1 rounded-sm" key={kw} >{kw} <button onClick={removeKeyword}>❌</button></li>
+              <li className="bg-indigo-500 p-1 rounded-md" key={kw} >{kw} <button onClick={removeKeyword}>❌</button></li>
             ))
           }
           </ul>
