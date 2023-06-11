@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 function HomePage() {
   const [keyword, setKeyword] = useState("");
@@ -23,7 +24,10 @@ function HomePage() {
       const data = await response.json();
       setResult(data);
     } catch (error) {
-      alert(error.message);
+      toast.error("Algo salio mal 😢 intenta de nuevo");
+      console.error(error);
+      setLoading(false);
+      setKeyword("");
       return;
     }
     setKeyword("");
