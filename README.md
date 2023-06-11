@@ -1,1 +1,3 @@
-# Get me a project
+# Give me an idea
+
+### Generate random ideas for your next project.
