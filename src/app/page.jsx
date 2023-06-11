@@ -23,7 +23,7 @@ function HomePage() {
       const data = await response.json();
       setResult(data);
     } catch (error) {
-      alert(error.message);
+      alert("Algo salio mal 😢 /n" + error.message);
       return;
     }
     setKeyword("");
