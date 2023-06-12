@@ -5,8 +5,6 @@ export async function OpenAIStream(payload) {
     const encoder = new TextEncoder();
     const decoder = new TextDecoder();
 
-    console.log(payload);
-
     const res = await fetch("https://api.openai.com/v1/chat/completions", {
         headers: {
             "Content-Type": "application/json",

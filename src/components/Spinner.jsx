@@ -2,7 +2,7 @@ import React from 'react'
 
 function Spinner() {
     return (
-        <div class="lds-facebook"><div></div><div></div><div></div></div>
+            <span class="loader"></span>
         )
 }
 

@@ -121,19 +121,21 @@ function HomePage() {
                         Te doy una idea de proyecto para que practiques
 
                     </h1>
-                    <button
-                        type="submit"
-                        className="bg-indigo-700 p-2 rounded-md block my-2 disabled:opacity-50"
-                        disabled={loading}
-                    >
-                        {loading
-                            ? "Mmmm estoy pensando 🤔"
-                            : "Dale decime 💡"
-                        }
+                    <div className="flex justify-start items-center gap-8">
+                        <button
+                            type="submit"
+                            className="bg-indigo-700 p-2 rounded-md block my-2 disabled:opacity-50"
+                            disabled={loading}
+                        >
+                            {loading
+                                ? "Escribiendo... 💡"
+                                : "Dale decime 🤓"
+                            }
+                        </button>
                         {
                             loading && <Spinner />
                         }
-                    </button>
+                    </div>
                     <p className="text-md font-bold text-slate-200 mt-10 mb-2">
                         Podes agregar palabras clave para orientar la respuesta
                     </p>
