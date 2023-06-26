@@ -118,7 +118,7 @@ function HomePage() {
             <div className="w-full md:w-1/2">
                 <form onSubmit={onSubmit} className="bg-zinc-900 p-10 rounded-lg m-2">
                     <h1 className="text-xl font-bold text-slate-200 mb-5">
-                        Te doy una idea de proyecto para que practiques
+                        Te doy una idea de proyecto para que practiques NextJS+Typescript
 
                     </h1>
                     <div className="flex justify-start items-center gap-8">
@@ -129,7 +129,7 @@ function HomePage() {
                         >
                             {loading
                                 ? "Escribiendo... 💡"
-                                : "Dale decime 🤓"
+                                : "Me ayudas? 🤓"
                             }
                         </button>
                         {
