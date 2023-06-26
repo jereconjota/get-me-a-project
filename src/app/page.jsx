@@ -11,7 +11,7 @@ import Spinner from "@/components/Spinner";
 function HomePage() {
     const [keyword, setKeyword] = useState("");
     const [loading, setLoading] = useState(false);
-    const [keywords, setKeywords] = useState(["goku", "vegeta"]);
+    const [keywords, setKeywords] = useState([]);
     const [readableResult, setReadableResult] = useState("");
 
     const generateIdea = async () => {
@@ -118,25 +118,11 @@ function HomePage() {
             <div className="w-full md:w-1/2">
                 <form onSubmit={onSubmit} className="bg-zinc-900 p-10 rounded-lg m-2">
                     <h1 className="text-xl font-bold text-slate-200 mb-5">
-                        Te doy una idea de proyecto para que practiques NextJS+Typescript
-
+                        Te doy una idea de proyecto para que practiques 
                     </h1>
-                    <div className="flex justify-start items-center gap-8">
-                        <button
-                            type="submit"
-                            className="bg-indigo-700 p-2 rounded-md block my-2 disabled:opacity-50"
-                            disabled={loading}
-                        >
-                            {loading
-                                ? "Escribiendo... 💡"
-                                : "Me ayudas? 🤓"
-                            }
-                        </button>
-                        {
-                            loading && <Spinner />
-                        }
-                    </div>
-                    <p className="text-md font-bold text-slate-200 mt-10 mb-2">
+                    <p className="mb-5">NextJS + Typescript 🚀</p>
+                    <hr />
+                    <p className="text-md font-bold text-slate-200 mt-5 mb-2">
                         Podes agregar palabras clave para orientar la respuesta
                     </p>
                     <input
@@ -150,12 +136,28 @@ function HomePage() {
                         onKeyDown={addKeyword}
                         disabled={loading}
                     />
-                    <ul className="text-md flex gap-5 mt-5">            {
+                    <ul className="text-md flex gap-5 my-5">            {
                         keywords.map((kw) => (
                             <li className="bg-indigo-500 p-1 rounded-md" key={kw} >{kw} <button onClick={removeKeyword}>❌</button></li>
                         ))
                     }
                     </ul>
+                    <hr />
+                    <div className="flex justify-end items-center gap-8 mt-6">
+                        <button
+                            type="submit"
+                            className="bg-indigo-700 p-2 rounded-md block my-2 disabled:opacity-50 hover:bg-indigo-600"
+                            disabled={loading}
+                        >
+                            {loading
+                                ? "Escribiendo... 💡"
+                                : "Me ayudas? 🤓"
+                            }
+                        </button>
+                        {
+                            loading && <Spinner />
+                        }
+                    </div>
                 </form>
             </div>
 
