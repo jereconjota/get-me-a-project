@@ -31,7 +31,7 @@ export async function POST(request) {
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
-        max_tokens: 2000,
+        max_tokens: 300,
         stream: true,
         n: 1,
     };
